@@ -199,6 +199,8 @@ module.exports = yeoman.generators.Base.extend(
   createMeteorProject: ->
     cb = @async()
     genUtils.spawnSync 'meteor', [
+      '--release'
+      '1.2'
       'create'
       @appname
     ], cb
